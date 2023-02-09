@@ -40,6 +40,18 @@
         <!-- LOGO -->
         <div class="container d-flex align-items-center justify-content-between h-100 ">
             <img src="img/logo-small.svg" alt="Logo sotify" class="logo">
+            <form action="api/index.php" method="GET">
+                <div class="input-group mb-3">
+                    <select class="form-select" name="genre">
+                        <option selected>Genere</option>
+                        <option value="rock">Rock</option>
+                        <option value="pop">Pop</option>
+                        <option value="jazz">Jazz</option>
+                        <option value="metal">Metal</option>
+                    </select>
+                    <button class="btn btn-primary">Cerca</button>
+                </div>
+            </form>
         </div>
     </header>
 
