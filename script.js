@@ -8,12 +8,23 @@ const app = Vue.createApp({
     data() {
         return {
             disks: [],
+            selectedDisk: [],
+            isClick: false
         }
     },
     mounted() {
         axios.get(apiUri).then(res => {
             this.disks = res.data;
         })
+    },
+    methods: {
+        clickToCard(array) {
+            this.isClick = true;
+            this.selectedDisk = array;
+        },
+        infoToggle() {
+            this.isClick = false;
+        }
     }
 });
 

@@ -13,18 +13,24 @@
     margin: 0 auto;
 }
 
+:root {
+    --darkblue: #06131F;
+    --grey: #1D2D3C;
+
+}
+
 /* GENERIC */
 
 body {
     font-family: sans-serif;
-    background-color: #1D2D3C;
+    background-color: var(--grey);
     min-height: calc(100vh - 120px);
 }
 
 
 /* HEADER */
 header {
-    background-color: #06131F;
+    background-color: var(--darkblue);
     height: 120px;
 }
 
@@ -35,10 +41,31 @@ header {
 /* BODY */
 
 .card {
-    background-color: #06131F;
+    background-color: var(--darkblue);
 }
 
-.col img {
+.container img {
     height: 250px;
     width: 250px;
+}
+
+.info-block {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 80vh;
+    background-color: var(--darkblue);
+    border-radius: 20px;
+}
+
+#close {
+    position: absolute;
+    top: 20px;
+    right: 20PX;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
 }
