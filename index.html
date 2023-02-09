@@ -32,6 +32,7 @@
 
 <body>
     <header>
+        <!-- LOGO -->
         <div class="container d-flex align-items-center justify-content-between h-100 ">
             <img src="img/logo-small.svg" alt="Logo sotify" class="logo">
         </div>
@@ -41,6 +42,7 @@
         <div class="container text-white" id="root">
             <div class="row row-cols-3">
                 <div v-for="disk in disks" :key="disk.title" class="col  g-4">
+                    <!-- DISK CARD -->
                     <div class="card d-flex flex-column align-items-center p-4">
                         <img :src="disk.poster" :alt="disk.title" class="img-fluid">
                         <h4 class="my-4">{{ disk.title}}</h4>

@@ -1,5 +1,5 @@
 // CHECK JS LINK
-const apiUri = 'http://localhost:8080/php-dischi-json/disks.php';
+const apiUri = 'http://localhost:8080/php-dischi-json/api/';
 
 //? CREAZIONE APP DI VUE
 
