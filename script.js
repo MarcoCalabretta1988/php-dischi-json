@@ -1,11 +1,10 @@
-
-
 // CHECK JS LINK
-const apiUri = 'http://localhost:8080/php-dischi-json/index.php';
+const apiUri = 'http://localhost:8080/php-dischi-json/disks.php';
 
 //? CREAZIONE APP DI VUE
 
 const app = Vue.createApp({
+    name: 'AppDisks',
     data() {
         return {
             disks: [],
@@ -17,5 +16,5 @@ const app = Vue.createApp({
         })
     }
 });
-console.log(this.disks)
+
 app.mount('#root');

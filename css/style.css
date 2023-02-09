@@ -31,3 +31,14 @@ header {
 .container .logo {
     height: 50px;
 }
+
+/* BODY */
+
+.card {
+    background-color: #06131F;
+}
+
+.col img {
+    height: 250px;
+    width: 250px;
+}
