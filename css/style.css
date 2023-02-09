@@ -1,6 +1,6 @@
 /* CSS RESET */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,13 +8,26 @@
 
 /* UTILITIES */
 
-.container{ 
+.container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
 /* GENERIC */
 
-body{
+body {
     font-family: sans-serif;
+    background-color: #1D2D3C;
+    min-height: calc(100vh - 120px);
+}
+
+
+/* HEADER */
+header {
+    background-color: #06131F;
+    height: 120px;
+}
+
+.container .logo {
+    height: 50px;
 }
