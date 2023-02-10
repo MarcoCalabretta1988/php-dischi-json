@@ -9,13 +9,13 @@ const app = Vue.createApp({
         return {
             disks: [],
             selectedDisk: [],
+            genres: [],
+            selectedGenre: '',
             isClick: false
         }
     },
-    mounted() {
-        axios.get(apiUri).then(res => {
-            this.disks = res.data;
-        })
+    created() {
+        this.fetchApi(apiUri, 'disks');
     },
     methods: {
         clickToCard(array) {
@@ -24,6 +24,18 @@ const app = Vue.createApp({
         },
         infoToggle() {
             this.isClick = false;
+        },
+        fetchApi(endpoint, target) {
+            axios.get(endpoint).then(res => {
+                this[target] = res.data;
+            })
+        },
+        filterDisks() {
+            let endpoint = apiUri;
+            if (this.selectedGenre) endpoint += `?genre=${this.selectedGenre}`;
+            console.log(endpoint)
+            this.fetchApi(endpoint, 'disks')
+
         }
     }
 });

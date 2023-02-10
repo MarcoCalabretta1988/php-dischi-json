@@ -12,8 +12,14 @@ $disks = json_decode($json_data, true);
 //rescue select value
 $genre = $_GET['genre'] ?? '';
 
-if (!empty($genre)) {
-    $filter_disk = array_filter($disks, fn ($disk) => strtolower($disk['genre']) === $genre);
+if ($genre) {
+    $filter_disk = [];
+    foreach ($disks as $disk) {
+        if ($disk['genre'] === $genre) {
+            $filter_disk[] = $disk;
+        }
+    }
+
     $disks = $filter_disk;
 }
 
