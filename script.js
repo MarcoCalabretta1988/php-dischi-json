@@ -9,7 +9,7 @@ const app = Vue.createApp({
         return {
             disks: [],
             selectedDisk: [],
-            genres: [],
+            genres: ['Rock', 'Pop', 'Jazz', 'Metal'],
             selectedGenre: '',
             isClick: false
         }
@@ -33,7 +33,6 @@ const app = Vue.createApp({
         filterDisks() {
             let endpoint = apiUri;
             if (this.selectedGenre) endpoint += `?genre=${this.selectedGenre}`;
-            console.log(endpoint)
             this.fetchApi(endpoint, 'disks')
 
         }
